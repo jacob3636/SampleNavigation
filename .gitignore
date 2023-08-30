@@ -2,11 +2,7 @@
 #
 .DS_Store
 
-# JS:::::
-# App.js - is a copy of one of the 3 navigator types: App.drawer.js, App.stack.js, App.tab.js
-# 	   depnding on which one you want to work, don't forget to copy it over App.js
-App.js
-
+# android - JS::: a big dir containing android packages, will not track it
 android
 
 # Xcode
