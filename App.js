@@ -8,6 +8,11 @@
  * 
  *      npm install @react-navigation/drawer
  * 
+ * https://reactnavigation.org/docs/drawer-based-navigation/
+ * https://reactnavigation.org/docs/drawer-navigator/
+ * 
+ * Nesting drawers:
+ * https://reactnavigation.org/docs/multiple-drawers/
  * 
  */
 import 'react-native-gesture-handler';
