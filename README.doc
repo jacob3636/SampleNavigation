@@ -1,0 +1,99 @@
+Navigation Examples for: stack, tab, and drawer
+
+App.drawer.js  - drawer navigation exmple
+App.stack.js  - stack navigation exmple
+App.tab.js    - tab navigation exmple
+
+Was tested aginst:
+
+npm v=9.8.1
+npx v=9.8.1
+react-native: 0.72
+Android Studio v=2022.3.1
+Android SDK: 
+  SDK Platform: Android 13.0 ("Tiramisu")
+		Android SDK Platform: 33
+		Source for Android: 33
+		Google APIs Intel x86_64 Atom System Image: 33
+  SDK Tools: Android SDK build-Tools 34
+  		33.0.2
+
+Note: for more details to setup Android Studio/SDK see:
+	https://reactnative.dev/docs/environment-setup?guide=native
+
+
+Note: in react native 0.7 and above when initializing a new project a type script App.tsx
+		is created. To switch to javascript you can remove the file and replace it with
+		your own App.js script.
+
+***** React Navigation - the most popular community navigation library. It has native components for iOS & Android.
+		It provides a Native Stack Navigator that can transition between screens & manage nativation history.
+		This lib comes with built in navigators such as stack, tab, and drawer.
+		This lib has different built-in navigators such as: stack, tab, & drawer.
+
+		Home page: 
+		  Getting started - page includeds installation:
+			https://reactnavigation.org/docs/getting-started/
+		
+		https://reactnavigation.org/
+		
+
+		Installation:
+			To add React Navigation to a React Native project which uses Expo, follow these instructions:
+
+			npm install @react-navigation/native
+
+			npm install react-native-screens react-native-safe-area-context
+			
+			# note: native-stack depends on the above two libs react-native-screens & react-native-safe-area-context
+			# 		They are both native libs to react
+
+			npm install @react-navigation/native-stack
+
+			# For Tab navigation install:
+
+			npm install @react-navigation/bottom-tabs
+
+			# For drawer Navigation install:
+
+			npm install @react-navigation/drawer
+
+			npm install react-native-gesture-handler react-native-reanimated
+
+			*** babel.config.js - update file in project dir. After presets:... Add the line:
+				plugins: ['react-native-reanimated/plugin'],
+
+			Note: for drawer navigation - if you get errors during npx run-android try to reset the cache
+				npm start -- --reset-cache
+				Note: when the prompts come up type a (a - run on Android)
+
+Examples:
+
+App.stack.js - example of stack navigation
+App.tab.js - example of Tab navigation
+
+=======================================================================
+
+***** React Native Vector Icons/Material
+
+npm install react-native-vector-icons
+
+Note: 1) See App.js file for example
+      2) Vector icons has many font packages to choose from.
+	  		e.g.: FontAwesome - a package with close to 800 quality fonts
+			To view the fonts and get their names see:
+			https://oblador.github.io/react-native-vector-icons/
+
+      3) After installation you will need to do:
+
+	For Android:
+	Option: With Gradle (recommended)
+This method has the advantage of fonts being copied from this module at build time so that the fonts and JS are always in sync, making upgrades painless.
+
+==> Edit android/app/build.gradle ( NOT android/build.gradle ) and add the following:
+
+apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+
+
+For installation details and how to use see:
+https://github.com/oblador/react-native-vector-icons
