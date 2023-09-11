@@ -1,0 +1,23 @@
+
+--- Creating a new react native app:
+
+Note: use npx as it eliminates the need to install any packages. npx will install them locally in the new app
+      In the following example app name is: WebViewEX
+
+npx react-native init WebViewEX
+
+-- Install third party module: webView
+cd WebViewEX
+npm install --save react-native-webview
+
+WebView - for more into see getting started docs:
+https://github.com/react-native-webview/react-native-webview/blob/master/docs/Getting-Started.md
+
+
+--- Running your React Native application on Windows 10 with android emulator:
+
+npx react-native run-android
+
+Note: the above will start Metro (npx react-native start) as well as the Android emulator. No need to start Metro
+	first manually. The above will span two windows and you need to keep the program running in the window
+	where you executed the above command.

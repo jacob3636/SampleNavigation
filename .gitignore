@@ -2,6 +2,9 @@
 #
 .DS_Store
 
+# App.js is a copy of one of the navigation types: drawer, stack, or tab
+App.js
+
 # android - JS::: a big dir containing android packages, will not track it
 android
 

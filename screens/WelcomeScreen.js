@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, Pressable, Image } from 'react-native';
 
+
 export default function WelcomeScreen({navigation}) {
   
   return (
@@ -20,7 +21,10 @@ export default function WelcomeScreen({navigation}) {
         and classic cocktails in a lively but casual environment. We would love
         to hear more about your experience with us!
       </Text>
-      <Pressable onPress={() => navigation.navigate("Login")}> 
+      <Pressable onPress={() => navigation.navigate("Menu")}> 
+        <Text style={styles.buttonText}>Menu</Text> 
+      </Pressable> 
+      <Pressable onPress={() => {navigation.navigate("Login")}}> 
         <Text style={styles.buttonText}>Log In</Text> 
       </Pressable> 
     </View>

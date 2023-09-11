@@ -14,6 +14,17 @@
  * Nesting drawers:
  * https://reactnavigation.org/docs/multiple-drawers/
  * 
+ * 
+ * NOTE: 1) We can only navigate to routes that have been defined on our navigator, we cannot navigate to an arbitrary component.
+ *           Only screens/components defined between the container <NavigationContainer>...</ NavigationContainer>
+ *           Any component/screen we want to navigate to, must first be defined inside navigator
+ *       2) While we must define all routes inside the <NavigationContainer>, we can hide an item via
+ *           the hide option, see example LoginScreen below.
+ * 
+ *      E.G.
+ *          To navigate to LoginScreen from WelcomeScreen button, we must define login inside
+ *          App.js <NavigationContainer>. See example in this file & inside WelcomeScree.js
+ * 
  */
 import 'react-native-gesture-handler';
 
@@ -32,6 +43,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import WelcomeScreen from './screens/WelcomeScreen';
 import MenuItems from './screens/MenuItems';
+import LoginScreen from './components/LoginScreen';
 
 import LittleLemonHeader from './components/LittleLemonHeader';
 import LittleLemonFooter from './components/LittleLemonFooter';
@@ -92,6 +104,13 @@ export default function App() {
         <Drawer.Screen 
             name="Menu" 
             component={MenuItems} 
+        />
+        <Drawer.Screen 
+            name="Login" 
+            component={LoginScreen} 
+            options={{
+                  drawerItemStyle: { height: 0 }
+            }}
         />
       </Drawer.Navigator>
     </View>
